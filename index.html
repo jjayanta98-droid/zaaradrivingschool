@@ -851,13 +851,21 @@
 
     @media (max-width:900px) {
 
-      .nav ul,
-      .cta {
+      .nav ul {
         display: none
+      }
+
+      .cta {
+        display: block;
+        order: 2;
+        flex-shrink: 0;
       }
 
       .menu-toggle {
         display: block;
+        order: 3;
+        margin-left: 8px;
+        flex-shrink: 0;
       }
 
       .nav.active ul {
@@ -874,8 +882,7 @@
       }
 
       .nav.active .cta {
-        display: block;
-        margin-top: 10px;
+        display: none; /* Hide header CTA when menu is open to avoid clutter */
       }
 
       .brand img {
@@ -943,34 +950,33 @@
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
+      .top-bar {
+        font-size: 10px !important;
+        padding: 4px 0 !important;
+      }
+      .top-bar a {
+        margin: 0 4px !important;
+      }
       .brand img {
-        width: 70px !important;
-        height: 70px !important;
+        width: 38px !important;
+        height: 38px !important;
+        filter: none !important;
       }
-
-      .brand div b {
-        font-size: 16px !important;
-      }
-
       .brand div div:first-child {
-        font-size: 18px !important;
+        font-size: 15px !important;
+        white-space: nowrap !important;
       }
-
-      .slides {
-        height: 280px;
+      .brand div div:last-child {
+        display: none !important;
       }
-
-      .slide-overlay {
-        padding: 15px;
+      .cta .btn {
+        padding: 6px 10px !important;
+        font-size: 11px !important;
+        white-space: nowrap !important;
       }
-
-      .slide-overlay h1 {
-        font-size: 1.4rem;
-      }
-
-      .slide-overlay p {
-        font-size: 13px;
+      .menu-toggle {
+        font-size: 22px !important;
       }
     }
 
@@ -1195,8 +1201,7 @@
         </ul>
       </nav>
       <div class="cta"><a class="btn"
-          href="https://wa.me/916289876330?text=I%20am%20interested%20in%20booking%20a%20free%20trial%20session.">Book
-          Free Trial</a></div>
+          href="https://wa.me/916289876330?text=I%20am%20interested%20in%20booking%20a%20free%20trial%20session.">Book Trial</a></div>
     </div>
   </header>
 
