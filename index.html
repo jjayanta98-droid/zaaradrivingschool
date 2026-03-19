@@ -1,0 +1,1972 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultmessages='true' b:layoutsVersion='3' b:responsive='true' lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2010/widgets' xmlns:data='http://www.google.com/2010/widgets/data' xmlns:expr='http://www.google.com/2010/widgets/expr'>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="google" content="notranslate" />
+  <meta name="theme-color" content="#0369a1" />
+  <title>Zaara Driving School</title>
+  <meta name="description"
+    content="Professional driving school offering car & two-wheeler training, license assistance, defensive driving and more." />
+  
+  <!-- Blogger Mobile Fixes -->
+  <meta content='yes' name='apple-mobile-web-app-capable'/>
+  <meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* --- General & Reset Styles --- */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, 'Segoe UI', Roboto, Arial;
+      color: #374151;
+      line-height: 1.6;
+      background: #fdfdfd
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color .3s ease
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin-top: 0;
+      color: #111827
+    }
+
+    h2 {
+      font-size: 2.1rem;
+      text-align: center;
+      margin-bottom: 25px
+    }
+
+    /* --- Top Bar --- */
+    .top-bar {
+      background: #0f172a;
+      color: white;
+      padding: 6px 0;
+      font-size: 13px;
+      text-align: center
+    }
+
+    .top-bar a {
+      font-weight: 600;
+      opacity: .9;
+      margin: 0 12px
+    }
+
+    .top-bar a:hover {
+      opacity: 1
+    }
+
+    /* --- Header & Navigation --- */
+    header {
+      background: linear-gradient(135deg, #0ea5a4 0%, #0369a1 100%);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      box-shadow: 0 6px 18px rgba(2, 6, 23, .12);
+      transition: padding .3s ease, background .3s ease
+    }
+
+    header.scrolled {
+      background: #0369a1;
+      padding: 8px 0;
+      box-shadow: 0 8px 20px rgba(2, 6, 23, .15)
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .brand img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      transition: all .3s ease;
+      filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.6));
+    }
+
+    header.scrolled .brand img {
+      width: 70px;
+      height: 70px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      margin: 0;
+      padding: 0
+    }
+
+    nav a {
+      font-weight: 600;
+      opacity: .95;
+      position: relative;
+      padding: 4px 0;
+      color: white
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #06b6d4;
+      transition: width .3s ease
+    }
+
+    nav a:hover::after {
+      width: 100%
+    }
+
+    .btn {
+      background: white;
+      color: #0369a1;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: background .3s ease, color .3s ease, transform .3s ease
+    }
+
+    .btn:hover {
+      background: #f0f9ff;
+      color: #0284c7;
+      transform: translateY(-2px)
+    }
+
+    /* --- Main Content Sections --- */
+    main>section {
+      padding: 50px 0
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-top: 18px;
+      padding: 0
+    }
+
+    .slides {
+      position: relative;
+      height: 440px
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transform: scale(1.02);
+      transition: opacity .8s ease, transform .8s ease;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center
+    }
+
+    .slide.show {
+      opacity: 1;
+      transform: scale(1)
+    }
+
+    .slide-overlay {
+      background: linear-gradient(90deg, rgba(2, 6, 23, 0.75) 0%, rgba(2, 6, 23, 0.1) 60%);
+      color: white;
+      padding: 36px;
+      width: 60%;
+      border-radius: 8px;
+      margin-left: 40px
+    }
+
+    .slide-overlay h1 {
+      font-size: 2.5rem;
+      color: white
+    }
+
+    .hero-controls {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      display: flex;
+      gap: 8px;
+      z-index: 5
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .5);
+      cursor: pointer;
+      transition: background .3s ease
+    }
+
+    .dot.active {
+      background: #06b6d4
+    }
+
+    /* --- Quick Info Section --- */
+    .quick-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding-top: 20px
+    }
+
+    .quick-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      box-shadow: 0 6px 18px rgba(2, 6, 23, .06);
+      transition: transform .3s ease, box-shadow .3s ease
+    }
+
+    .quick-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 22px rgba(2, 6, 23, .1)
+    }
+
+    .quick-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      background: linear-gradient(135deg, #06b6d4, #0ea5a4);
+      color: white
+    }
+
+    .quick-card strong {
+      display: block;
+      font-weight: 800;
+      color: #111827
+    }
+
+    /* --- Courses Section --- */
+    #services {
+      background: #f8fafc;
+      border-radius: 12px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px
+    }
+
+    .service {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 8px 20px rgba(2, 6, 23, .08);
+      text-align: center;
+      transition: transform .3s ease, box-shadow .3s ease
+    }
+
+    .service:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 28px rgba(2, 6, 23, .12)
+    }
+
+    .service i {
+      font-size: 42px;
+      color: #0369a1;
+      margin-bottom: 12px
+    }
+
+    .service h3 {
+      color: #0369a1
+    }
+
+    /* --- Features Section --- */
+    #features {
+      padding: 60px 24px;
+    }
+
+    .feature-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px
+    }
+
+    .feature-image {
+      flex: 1;
+      min-width: 280px;
+      text-align: center
+    }
+
+    .feature-list {
+      flex: 1.2;
+      min-width: 300px
+    }
+
+    .feature-image img {
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(2, 6, 23, .08);
+      animation: float 4s ease-in-out infinite
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-12px)
+      }
+
+      100% {
+        transform: translateY(0)
+      }
+    }
+
+    .feature-block {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 6px 18px rgba(2, 6, 23, .06);
+      transition: transform .3s ease, box-shadow .3s ease;
+      margin-bottom: 16px
+    }
+
+    .feature-block:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(2, 6, 23, .1)
+    }
+
+    .feature-block i {
+      font-size: 28px;
+      color: #06b6d4;
+      flex-shrink: 0;
+      padding-top: 4px
+    }
+
+    .feature-block h4 {
+      margin: 0 0 6px 0;
+      color: #0369a1
+    }
+
+    /* --- Why Choose Us Section --- */
+    #choose {
+      background: #f8fafc;
+      border-radius: 12px;
+    }
+
+    .choose-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px
+    }
+
+    .choose-box {
+      background: white;
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 4px 15px rgba(2, 6, 23, .05);
+      transition: transform .3s ease, box-shadow .3s ease
+    }
+
+    .choose-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(2, 6, 23, .08)
+    }
+
+    .choose-box h4 {
+      color: #0369a1;
+      margin-bottom: 8px
+    }
+
+    .choose-boxes .choose-box:first-child {
+      background: #0f172a;
+      color: white;
+      grid-column: 1 / -1;
+      transform: scale(1.02)
+    }
+
+    .choose-boxes .choose-box:first-child h4,
+    .choose-boxes .choose-box:first-child p {
+      color: white
+    }
+
+    /* --- Pricing Slider Section Styles --- */
+    #pricing {
+      background: white
+    }
+
+    .pricing-slider-wrapper {
+      position: relative;
+      overflow: hidden
+    }
+
+    .pricing-grid {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+      gap: 20px;
+    }
+
+    .pricing-box {
+      flex-shrink: 0;
+      width: calc(100% - 20px);
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing-box-inner {
+      padding: 24px
+    }
+
+    .pricing-box h4 {
+      color: #0369a1;
+      font-size: 1.4rem
+    }
+
+    .pricing-box .price {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #111827;
+      margin: 8px 0
+    }
+
+    .old-price {
+      font-size: 1.2rem;
+      color: #9ca3af;
+      text-decoration: line-through;
+      font-weight: 500;
+      margin-bottom: -5px;
+      display: block;
+    }
+
+    .pricing-box p {
+      font-size: 14px;
+      min-height: 60px
+    }
+
+    .pricing-box .btn {
+      display: inline-block;
+      margin-top: 16px;
+      background: #0369a1;
+      color: white
+    }
+
+    .pricing-box .btn:hover {
+      background: #0ea5a4
+    }
+
+    .pricing-box.popular {
+      border-color: #0ea5a4;
+      border-width: 2px
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: 15px;
+      right: -35px;
+      background: #0ea5a4;
+      color: white;
+      padding: 4px 30px;
+      transform: rotate(45deg);
+      font-size: 12px;
+      font-weight: 700
+    }
+
+    .pricing-controls {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 20px
+    }
+
+    .pricing-controls .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ccc;
+      cursor: pointer
+    }
+
+    .pricing-controls .dot.active {
+      background: #0369a1
+    }
+
+    @media (min-width: 550px) {
+      .pricing-box {
+        width: calc(50% - 20px);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .pricing-box {
+        width: calc(33.333% - 20px);
+      }
+    }
+
+    /* --- Contact Section --- */
+    #contact {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding-top: 40px !important;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: flex-start
+    }
+
+    .contact-details h3,
+    .contact-form-wrapper h3 {
+      text-align: left;
+      font-size: 1.8rem;
+      margin-bottom: 20px
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 20px
+    }
+
+    .contact-item i {
+      font-size: 20px;
+      color: #0ea5a4;
+      padding-top: 5px
+    }
+
+    .contact-item p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.5
+    }
+
+    .contact-item strong {
+      color: #111827;
+      display: block;
+      margin-bottom: 2px
+    }
+
+    .map-wrapper {
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 20px
+    }
+
+    .contact-form-wrapper {
+      background: white;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(2, 6, 23, .08)
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: 600
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #e6eef6;
+      transition: border-color .3s ease, box-shadow .3s ease
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: #06b6d4;
+      box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2)
+    }
+
+    button.primary {
+      width: 100%;
+      background: #0369a1;
+      color: white;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 0;
+      font-weight: 700;
+      margin-top: 16px;
+      cursor: pointer;
+      transition: background .3s ease
+    }
+
+    button.primary:hover {
+      background: #0ea5a4
+    }
+
+    #form-message {
+      text-align: center;
+      margin-top: 12px;
+      font-weight: 600;
+      color: #0ea5a4
+    }
+
+    /* --- Footer --- */
+    footer {
+      margin-top: 20px;
+      padding: 30px 0;
+      font-size: 14px;
+      background: #0f172a;
+      color: #d1d5db
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 28px
+    }
+
+    .footer-grid h4 {
+      margin-top: 0;
+      color: #06b6d4;
+      font-size: 16px
+    }
+
+    .footer-grid p {
+      margin: 8px 0;
+      opacity: .85
+    }
+
+    .footer-grid a:hover {
+      opacity: 1;
+      color: white
+    }
+
+    .footer-socials i {
+      font-size: 20px;
+      margin-right: 12px;
+      opacity: .85;
+      transition: opacity .3s ease, transform .3s ease
+    }
+
+    .footer-socials a:hover i {
+      opacity: 1;
+      transform: scale(1.1)
+    }
+
+    /* --- Reviews Section --- */
+    .reviews-section {
+      background: #f1f5f9;
+      padding: 40px 0 20px;
+      overflow: hidden;
+    }
+
+    .reviews-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .reviews-header h2 {
+      margin-bottom: 5px;
+    }
+
+    .reviews-container {
+      display: flex;
+      width: max-content;
+      animation: scrollReviews 35s linear infinite;
+      gap: 24px;
+      padding: 15px 0;
+    }
+
+    .reviews-section:hover .reviews-container {
+      animation-play-state: paused;
+    }
+
+    @keyframes scrollReviews {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(calc(-304px * 10));
+      }
+
+      /* 280px width + 24px gap = 304px */
+    }
+
+    .review-card {
+      width: 280px;
+      height: 450px;
+      background: #f1f5f9;
+      border-radius: 15px;
+      transition: all 0.4s ease;
+      position: relative;
+      flex-shrink: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .review-card:hover {
+      transform: translateY(-10px);
+      z-index: 10;
+    }
+
+    .review-image-wrapper {
+      width: 100%;
+      height: 100%;
+      background: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .review-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.5s ease;
+      cursor: pointer;
+    }
+
+    .review-card:hover .review-image-wrapper img {
+      transform: scale(1.02);
+    }
+
+    /* --- Image Modal (Lightbox) --- */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(8px);
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      cursor: zoom-out;
+    }
+
+    .modal.show {
+      display: flex;
+      opacity: 1;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+      transform: scale(0.8);
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    .modal.show .modal-content {
+      transform: scale(1);
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      z-index: 2001;
+    }
+
+    .close-modal:hover {
+      color: #0ea5a4;
+      transform: scale(1.1);
+    }
+
+
+
+    /* --- Responsive --- */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width:900px) {
+
+      .nav ul,
+      .cta {
+        display: none
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav.active ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #0369a1;
+        padding: 20px;
+        gap: 15px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav.active .cta {
+        display: block;
+        margin-top: 10px;
+      }
+
+      .brand img {
+        width: 80px;
+        height: 80px;
+      }
+
+      header.scrolled .brand img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .hero {
+        margin-top: 10px;
+      }
+
+      .slides {
+        height: 350px;
+      }
+
+      .slide-overlay {
+        width: 90%;
+        margin-left: 5%;
+        padding: 20px;
+        text-align: center;
+        background: rgba(2, 6, 23, 0.85);
+      }
+
+      .slide-overlay h1 {
+        font-size: 1.8rem;
+      }
+
+      .slide-overlay p {
+        font-size: 14px;
+      }
+
+      .pricing-box {
+        width: 100% !important;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .footer-grid div {
+        margin-bottom: 20px;
+      }
+
+      .footer-socials {
+        justify-content: center;
+        display: flex;
+      }
+
+      h2 {
+        font-size: 1.7rem;
+      }
+
+      main>section {
+        padding: 40px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .brand img {
+        width: 70px !important;
+        height: 70px !important;
+      }
+
+      .brand div b {
+        font-size: 16px !important;
+      }
+
+      .brand div div:first-child {
+        font-size: 18px !important;
+      }
+
+      .slides {
+        height: 280px;
+      }
+
+      .slide-overlay {
+        padding: 15px;
+      }
+
+      .slide-overlay h1 {
+        font-size: 1.4rem;
+      }
+
+      .slide-overlay p {
+        font-size: 13px;
+      }
+    }
+
+    /* --- Certificate Section --- */
+    #cert-view {
+      padding: 40px 16px;
+      background: #f1f5f9;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cert-container {
+      width: 100%;
+      max-width: 1123px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .certificate {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1123 / 794;
+      margin: 20px auto;
+      background: white;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .cert-name {
+      position: absolute;
+      top: 45.4%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 3.8vw;
+      font-weight: bold;
+      color: #111827;
+      font-family: 'Outfit', sans-serif;
+      width: 80%;
+      text-align: center;
+    }
+
+    .cert-date {
+      position: absolute;
+      top: 80.6%;
+      left: 26.7%;
+      font-size: 1.8vw;
+      color: #374151;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    @media (min-width: 1123px) {
+      .cert-name { font-size: 42px; }
+      .cert-date { font-size: 20px; }
+    }
+
+    @media (max-width: 600px) {
+      .cert-name { font-size: 5vw; top: 44.5%; }
+      .cert-date { font-size: 2.8vw; left: 25%; }
+    }
+
+    .download-btn-group {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      width: 100%;
+    }
+
+    /* --- Certificate Login Modal --- */
+    .cert-modal {
+      display: none;
+      position: fixed;
+      z-index: 3000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cert-modal-content {
+      background: white;
+      padding: 35px;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      position: relative;
+      animation: modalFadeIn 0.3s ease-out;
+    }
+
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .cert-modal-content h3 {
+      margin-bottom: 20px;
+      color: #0369a1;
+      font-size: 1.5rem;
+    }
+
+    .cert-modal-form input {
+      margin-bottom: 15px;
+      display: block;
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+    }
+
+    .cert-modal-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #9ca3af;
+    }
+
+    .cert-modal-close:hover {
+      color: #374151;
+    }
+
+    /* --- Print Styles --- */
+    @media print {
+      @page {
+        size: landscape;
+        margin: 0;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      body * {
+        visibility: hidden;
+      }
+      #cert-view, #cert-view * {
+        visibility: visible;
+      }
+      #cert-view {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        background: white;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden !important;
+      }
+      .cert-container {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+      .certificate {
+        width: 1123px !important;
+        height: 794px !important;
+        margin: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        transform-origin: center;
+      }
+      .download-btn-group, header, footer, .top-bar {
+        display: none !important;
+      }
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
+  <b:skin><![CDATA[
+    /* Blogger Theme Skin */
+    .post-content { padding: 40px 0; }
+    .post-body { font-size: 1.1rem; line-height: 1.8; color: #374151; }
+    .post-title { font-size: 2.5rem; margin-bottom: 20px; color: #111827; }
+  ]]></b:skin>
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <a href="tel:+916289876330">📞 +91 8240039990</a>
+    <a href="mailto:services.zaara@gmail.com">✉️ services.zaara@gmail.com</a>
+  </div>
+
+  <header id="header">
+    <div class="container nav" id="navbar">
+      <a href="#home" class="brand">
+          <img src="https://lh3.googleusercontent.com/d/1I-JS7kBaFtiANL-BqMDs1wEJtQmjjE75" alt="Zaara Driving School Logo"
+          style="object-fit:contain; transition: all 0.3s ease; filter: drop-shadow(0 0 12px rgba(255,255,255,0.6));"
+          class="logo-img" />
+        <div>
+          <div style="font-weight:800;font-size:22px;color:white;letter-spacing:0.5px;">Zaara Driving School</div>
+          <div style="font-size:13px;opacity:.9;color:white;font-weight:500;">Learning Good Habits For Life.</div>
+        </div>
+      </a>
+      <div class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+      <nav>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="showPage('home')">Home</a></li>
+          <li><a href="javascript:void(0)" onclick="showPage('home', 'services')">Courses</a></li>
+          <li><a href="javascript:void(0)" onclick="showPage('home', 'pricing')">Pricing</a></li>
+          <li><a href="javascript:void(0)" onclick="showPage('home', 'features')">Features</a></li>
+          <li><a href="#tc-view" onclick="showPage('tc')">T&C</a></li>
+          <li><a href="javascript:void(0)" onclick="openCertLogin()">Certificate</a></li>
+        </ul>
+      </nav>
+      <div class="cta"><a class="btn"
+          href="https://wa.me/916289876330?text=I%20am%20interested%20in%20booking%20a%20free%20trial%20session.">Book
+          Free Trial</a></div>
+    </div>
+  </header>
+
+  <main>
+    <div id="home-view">
+    <section id="home" class="hero">
+      <div class="slides">
+        <div class="slide show" style="background-image:url('https://i.postimg.cc/YqQ6JfHc/image3.jpg')">
+          <div class="slide-overlay">
+            <h1>Professional Driving Courses</h1>
+            <p>Beginner to advanced lessons for cars (NT & TR).</p>
+          </div>
+        </div>
+        <div class="slide"
+          style="background-image:url('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto-format&fit=crop&w=1600&q=60')">
+          <div class="slide-overlay">
+            <h1>Defensive Driving & Road Safety</h1>
+            <p>Learn safe driving techniques and hazard awareness.</p>
+          </div>
+        </div>
+        <div class="slide"
+          style="background-image:url('https://images.unsplash.com/photo-1502877338535-766e1452684a?auto-format&fit=crop&w=1600&q=60')">
+          <div class="slide-overlay">
+            <h1>License & Test Preparation</h1>
+            <p>Assistance in applying for and clearing the NT and TR driving license test with confidence.</p>
+          </div>
+        </div>
+        <div class="slide" style="background-image:url('https://i.postimg.cc/44qwCxHD/image1.jpg')">
+          <div class="slide-overlay">
+            <h1>Learn. Drive. Safely.</h1>
+            <p>Professional driving instruction since 2010.</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-controls">
+        <div class="dot active" data-index="0"></div>
+        <div class="dot" data-index="1"></div>
+        <div class="dot" data-index="2"></div>
+        <div class="dot" data-index="3"></div>
+      </div>
+    </section>
+
+    <section class="container quick-info" aria-label="quick-info">
+      <div class="quick-card">
+        <div class="quick-icon"><i class="fa-solid fa-clock"></i></div>
+        <div><strong>Preferable Timings</strong>
+          <p style="margin:0;">Everyday 6 AM to 5PM.</p>
+        </div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+        <div><strong>Certified Instructors</strong>
+          <p style="margin:0;">Trained & patient instructors with high success rates.</p>
+        </div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-icon"><i class="fa-solid fa-car"></i></div>
+        <div><strong>Modern Vehicles & Success</strong>
+          <p style="margin:0;">Well-maintained 4 wheeler with dual controls with a 99% test pass rate.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="services" class="container">
+      <h2>Our Courses</h2>
+      <div class="services-grid">
+        <div class="service"><i class="fa-solid fa-car-side"></i>
+          <h3>Beginner Car Course</h3>
+          <p>18 Practical Lessons • Pick-up & Drop • Test Preparation • Unlimited Theory Classes.</p>
+        </div>
+
+        <div class="service"><i class="fa-solid fa-road-circle-check"></i>
+          <h3>Advanced Handling</h3>
+          <p>Parking mastery • Skid control • Defensive driving techniques.</p>
+        </div>
+        <div class="service"><i class="fa-solid fa-id-card"></i>
+          <h3>License Program</h3>
+          <h3>Zaara Driving School – Expert assistance for NT & TR driving license tests with fast DL approval.</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="container">
+      <h2 style="text-align:center;">Our Features</h2>
+      <p style="text-align:center; max-width: 800px; margin: 0 auto 40px; font-size:16px;">
+        Giving Best Options For You to get the hang of driving by our certified and amicable instructors.
+      </p>
+      
+      <div class="feature-content">
+        <div class="feature-image">
+          <img src="https://lh3.googleusercontent.com/d/1iZEIXMwDrMVU64Jeon54GrJoyi5ueE3-" alt="Zaara Driving School - Maruti Suzuki Alto K10 Training Car" style="width:100%; max-width:400px; height:auto; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.1);">
+        </div>
+        <div class="feature-list">
+          <div class="feature-block"><i class="fa-solid fa-chalkboard-user"></i>
+            <div>
+              <h4>EXPERIENCE INSTRUCTORS</h4>
+              <p style="margin:0;font-size:14px;">Certified instructors with 5+ years training experience and over 10 years driving expertise.</p>
+            </div>
+          </div>
+          <div class="feature-block"><i class="fa-solid fa-car-burst"></i>
+            <div>
+              <h4>DRIVING SIMULATOR TRAINING</h4>
+              <p style="margin:0;font-size:14px;">Coming Soon ...</p>
+            </div>
+          </div>
+          <div class="feature-block"><i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h4>Doorstep Pick-Up</h4>
+              <p style="margin:0;font-size:14px;">Convenient pick-up from your home or workplace at your preferred time. T&C apply.</p>
+            </div>
+          </div>
+          <div class="feature-block"><i class="fa-solid fa-id-card"></i>
+            <div>
+              <h4>Licensing & Documentation</h4>
+              <p style="margin:0;font-size:14px;">Specializes in RTO consultancy, Driving linces services, and vehicle documentation.</p>
+            </div>
+          </div>
+          <div class="feature-block"><i class="fa-solid fa-handshake-angle"></i>
+            <div>
+              <h4>Additional Services</h4>
+              <p style="margin:0;font-size:14px;">Driving Licence, MV Tax, Insurance, CF, Name Transfer & More.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="choose" class="container">
+      <h2>Why Choose Zaara Driving School?</h2>
+      <div class="choose-boxes">
+        <div class="choose-box">
+          <div style="margin-bottom: 25px;">
+            <h4>One-on-One Training</h4>
+            <p>We offer personalized one-on-one training so that each student receives full attention from the
+              instructor. This allows learners to progress at their own pace, ask questions freely, and gain confidence
+              behind the wheel. Our high test pass rate reflects our commitment to quality training.</p>
+          </div>
+          <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 20px;">
+            <h4>Your Partner in Safe Driving</h4>
+            <p>Zaara Driving School provides professional and reliable driving training to help you become a confident
+              and responsible driver. Our experienced instructors offer personalized guidance and practical lessons in
+              real road conditions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="pricing" class="container">
+      <h2>Our Pricing Plans</h2>
+      <div class="pricing-slider-wrapper">
+        <div class="pricing-grid">
+          <div class="pricing-box">
+            <div class="pricing-box-inner">
+              <h4>Practice Lessons without DL</h4>
+              <p>Pickup & Drop - Car Introduction - Car Controls - Turning & Steering Control - Revers & Parking - etc.
+              </p>
+              <span class="old-price">₹5,500</span>
+              <div class="price">₹4,900</div><a
+                href="https://wa.me/916289876330?text=I%20am%20interested%20in%20your%20driving%20lessons."
+                class="btn">Book Now</a>
+            </div>
+          </div>
+          <div class="pricing-box popular">
+            <div class="popular-badge">Most Popular</div>
+            <div class="pricing-box-inner">
+              <h4>Beginner Car Course with DL</h4>
+              <p>Pickup & Drop - Theory Classes - Car Introduction - Car Controls - Turning & Steering Control - Revers
+                & Parking - Test Preparation - etc.</p>
+              <span class="old-price">₹7,600</span>
+              <div class="price">₹6,900</div><a
+                href="https://wa.me/916289876330?text=I%20am%20interested%20in%20your%20driving%20lessons."
+                class="btn">Book Now</a>
+            </div>
+          </div>
+          <div class="pricing-box">
+            <div class="pricing-box-inner">
+              <h4>Beginner Car Course with Endorsement</h4>
+              <p>Pickup & Drop - Theory Classes - Car Introduction - Car Controls - Turning & Steering Control - Revers
+                & Parking - Test Preparation - etc.</p>
+              <span class="old-price">₹7,700</span>
+              <div class="price">₹7,200</div><a
+                href="https://wa.me/916289876330?text=I%20am%20interested%20in%20your%20driving%20lessons."
+                class="btn">Book Now</a>
+            </div>
+          </div>
+          <div class="pricing-box">
+            <div class="pricing-box-inner">
+              <h4>Licence Program</h4>
+              <p>Guidance from learner permit to driving test and final DL APPROVAL.</p>
+              <div class="price">Starting From ₹2,500</div><a
+                href="https://wa.me/916289876330?text=I%20am%20interested%20in%20your%20driving%20lessons."
+                class="btn">Book Now</a>
+            </div>
+          </div>
+          <div class="pricing-box">
+            <div class="pricing-box-inner">
+              <h4>Premium AC Driving Plan</h4>
+              <p>All driving services available in a comfortable AC car. Includes pickup & drop - theory classes - car
+                introduction - car controls - turning & steering control - reverse & parking - and test preparation etc.
+              </p>
+              <div class="price">Starting From ₹5,650</div><a
+                href="https://wa.me/916289876330?text=I%20am%20interested%20in%20your%20driving%20lessons."
+                class="btn">Book Now</a>
+            </div>
+          </div>
+
+
+
+        </div>
+        <div class="pricing-controls">
+          <div class="dot active" data-index="0"></div>
+          <div class="dot" data-index="1"></div>
+          <div class="dot" data-index="2"></div>
+          <div class="dot" data-index="3"></div>
+          <div class="dot" data-index="4"></div>
+        </div>
+    </section>
+
+    <section class="reviews-section">
+      <div class="reviews-header">
+        <h2>Student Success Stories</h2>
+        <p>Real experiences from our confident new drivers.</p>
+      </div>
+      <div class="reviews-container">
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-image-wrapper"><img
+              src="https://lh3.googleusercontent.com/d/1XQnlOyaeFAvN8OjlVF71auX6RY2A_4nZ" alt="Review 1"></div>
+        </div>
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="review-image-wrapper"><img
+              src="https://lh3.googleusercontent.com/d/1K0S2KTyX1XkKpo9bmVF8dsWGAHbRNGfw" alt="Review 2"></div>
+        </div>
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-image-wrapper"><img
+              src="https://lh3.googleusercontent.com/d/1Zupd5R13sJo_H7hQ-IS52qfITehnISCO" alt="Review 3"></div>
+        </div>
+        <!-- Review 4 -->
+        <div class="review-card">
+          <div class="review-image-wrapper"><img
+              src="https://lh3.googleusercontent.com/d/1KiLBQTGjj8875RWE8PMNRBdeHLQnQr_5" alt="Review 4"></div>
+        </div>
+        <!-- Review 5 -->
+        <div class="review-card">
+          <div class="review-image-wrapper"><img
+              src="https://lh3.googleusercontent.com/d/1zWoBl0_kzAU36vxcC72fTvJZwXWcGnco" alt="Review 5"></div>
+        </div>
+        <!-- Review 6 -->
+        <div class="review-card">
+          <div class="review-image-wrapper"><img
+              src="https://lh3.googleusercontent.com/d/18ffd463PpIrj9BLb9mX7zIwOVg6NiVG3" alt="Review 6"></div>
+        </div>
+        <!-- Review 7 -->
+        <div class="review-card">
+          <div class="review-image-wrapper"><img
+              src="https://lh3.googleusercontent.com/d/1Nmk_BUiXr-VZY-V0LhHU1OdOzlf4HEMz" alt="Review 7"></div>
+        </div>
+        <!-- Review 8 -->
+        <div class="review-card">
+          <div class="review-image-wrapper"><img
+              src="https://lh3.googleusercontent.com/d/1UBDFAskZBmowE_--kGUoY0yQK_2cHxxO" alt="Review 8"></div>
+        </div>
+        <!-- Review 9 -->
+        <div class="review-card">
+          <div class="review-image-wrapper"><img
+              src="https://lh3.googleusercontent.com/d/15RA1pE1rfiVytPvkSKDgKY91sTZ5aeTJ" alt="Review 9"></div>
+        </div>
+        <!-- Review 10 -->
+        <div class="review-card">
+          <div class="review-image-wrapper"><img
+              src="https://lh3.googleusercontent.com/d/1ClBW_13cA2Xl_lKuBm7rGAGHLElcc9hn" alt="Review 10"></div>
+        </div>
+        <!-- Duplicate for Infinite Loop -->
+        <div class="review-card">
+          <div class="review-image-wrapper"><img
+              src="https://lh3.googleusercontent.com/d/1XQnlOyaeFAvN8OjlVF71auX6RY2A_4nZ" alt="Review 1"></div>
+        </div>
+        <div class="review-card">
+          <div class="review-image-wrapper"><img
+              src="https://lh3.googleusercontent.com/d/1K0S2KTyX1XkKpo9bmVF8dsWGAHbRNGfw" alt="Review 2"></div>
+        </div>
+        <div class="review-card">
+          <div class="review-image-wrapper"><img
+              src="https://lh3.googleusercontent.com/d/1Zupd5R13sJo_H7hQ-IS52qfITehnISCO" alt="Review 3"></div>
+        </div>
+        <div class="review-card">
+          <div class="review-image-wrapper"><img
+              src="https://lh3.googleusercontent.com/d/1KiLBQTGjj8875RWE8PMNRBdeHLQnQr_5" alt="Review 4"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Contact & Bookings</h2>
+      <div class="contact-grid">
+        <div class="contact-details">
+          <h3>Get in Touch</h3>
+          <div class="contact-item"><i class="fa-solid fa-location-dot"></i>
+            <div><strong>Our Office Address</strong>
+              <p>283, BB Chatterjee Road, Kasba, Kolkata - 700042</p>
+            </div>
+          </div>
+          <div class="contact-item"><i class="fa-solid fa-phone"></i>
+            <div><strong>Call / WhatsApp</strong>
+              <p>+91 6289876330<br>+033 6641 0573</p>
+            </div>
+          </div>
+          <div class="contact-item"><i class="fa-solid fa-envelope"></i>
+            <div><strong>Email Us</strong>
+              <p>services.zaara@gmail.com</p>
+            </div>
+          </div>
+          <div class="map-wrapper"><iframe title="map"
+              src="https://www.google.com/maps?q=283+BB+Chatterjee+Road+Kasba+Kolkata&output=embed"
+              style="width:100%;height:260px;border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+        </div>
+        <div class="contact-form-wrapper">
+          <h3>Book a Free Trial</h3>
+          <form id="bookingForm" onsubmit="return handleSubmit(event)">
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="New Driving Course Booking Request!">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+
+            <label for="name">Full name</label><input id="name" name="name" required placeholder="Your full name" />
+            <label for="email">Email Address</label><input id="email" type="email" name="email" required
+              placeholder="example@email.com" />
+            <label for="phone">Phone / WhatsApp</label><input id="phone" name="phone" required
+              placeholder="+91 9XXXXXXXXX" />
+            <label for="course">Course of Interest</label>
+            <select id="course" name="course">
+              <option>Practice Lessons without DL</option>
+              <option>Beginner Car Course with DL</option>
+              <option>Beginner Car Course with Endorsement</option>
+              <option>Licence Program</option>
+              <option>Premium AC Driving Plan</option>
+              <option>Advanced Handling</option>
+            </select>
+            <label for="notes">Notes (optional)</label><textarea id="notes" name="notes" rows="3"
+              placeholder="Any preferred timings or questions?"></textarea>
+            <button class="primary" type="submit" id="submitBtn">Request Booking</button>
+            <div id="form-message"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+    </div>
+
+    <!-- T&C Page View (Single Page Logic) -->
+    <div id="tc-view" style="display:none; padding: 40px 16px; background: #f8fafc; min-height: 80vh;">
+      <div class="container" style="background: white; padding: 30px 20px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+        <h1 style="color: #0369a1; border-bottom: 3px solid #0ea5a4; padding-bottom: 15px; margin-bottom: 30px; font-size: clamp(1.8rem, 5vw, 2.5rem); text-align: center;">Driving School Terms &amp; Conditions</h1>
+        
+        <div style="display: grid; gap: 25px; color: #374151; font-size: 1.1rem; line-height: 1.8;">
+          <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; border-left: 5px solid #0ea5a4;">
+            <strong style="color: #0369a1; display: block; margin-bottom: 5px;">1. Training Schedule</strong>
+            Practical classes will be conducted according to the schedule given by the driving school.
+          </div>
+          
+          <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; border-left: 5px solid #0ea5a4;">
+            <strong style="color: #0369a1; display: block; margin-bottom: 5px;">2. Punctuality</strong>
+            Students must arrive on time for their driving lessons. If student late more than 15 minutes class will cancel for that day.
+          </div>
+
+          <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; border-left: 5px solid #0ea5a4;">
+            <strong style="color: #0369a1; display: block; margin-bottom: 5px;">3. Valid Documents</strong>
+            Students must have a valid Learner’s License (LL) before starting practical driving training.
+          </div>
+
+          <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; border-left: 5px solid #0ea5a4;">
+            <strong style="color: #0369a1; display: block; margin-bottom: 5px;">4. Class Cancellation</strong>
+            If a student wants to cancel or change a class, they must inform the driving school at least 1 hours in advance. You are permitted to cancel or reschedule up to (3) classes during the course without any penalty. Any class cancel beyond this limit will be count as per of the total no of classes in the selected package.
+          </div>
+
+          <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; border-left: 5px solid #0ea5a4;">
+            <strong style="color: #0369a1; display: block; margin-bottom: 5px;">5. Payment Policy</strong>
+            Full course fees must be paid before . Or two-part payment facility is available. At the time of admission, 75% of the total course fee must be paid. The remaining 25% must be paid after the completion of the 7th class as per the school policy.
+          </div>
+
+          <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; border-left: 5px solid #0ea5a4;">
+            <strong style="color: #0369a1; display: block; margin-bottom: 5px;">6. Refund Policy</strong>
+            Course fees once paid are non-refundable under normal circumstances.
+          </div>
+
+          <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; border-left: 5px solid #0ea5a4;">
+            <strong style="color: #0369a1; display: block; margin-bottom: 5px;">7. Safety Rules</strong>
+            Students must follow all traffic rules and instructor instructions during training.
+          </div>
+
+          <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; border-left: 5px solid #0ea5a4;">
+            <strong style="color: #0369a1; display: block; margin-bottom: 5px;">8. Damage Responsibility</strong>
+            If any damage happens due to intentional negligence, the student may be responsible.
+          </div>
+
+          <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; border-left: 5px solid #0ea5a4;">
+            <strong style="color: #0369a1; display: block; margin-bottom: 5px;">9. Weather / Holiday Policy</strong>
+            Classes may be postponed due to bad weather, public holidays, or unavoidable situations.
+          </div>
+
+          <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; border-left: 5px solid #0ea5a4;">
+            <strong style="color: #0369a1; display: block; margin-bottom: 5px;">10. Instructor Decision</strong>
+            The instructor’s decision regarding training progress and readiness for the driving test will be final.
+          </div>
+
+          <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; border-left: 5px solid #0ea5a4;">
+            <strong style="color: #0369a1; display: block; margin-bottom: 5px;">11. Driving Test</strong>
+            The driving school will guide for the RTO driving test, but passing the test depends on the student’s performance.
+          </div>
+
+          <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; border-left: 5px solid #0ea5a4;">
+            <strong style="color: #0369a1; display: block; margin-bottom: 5px;">12. Time Duration</strong>
+            Each practical class will be conducted for the fixed duration decided by the driving school.
+          </div>
+
+          <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; border-left: 5px solid #0ea5a4;">
+            <strong style="color: #0369a1; display: block; margin-bottom: 5px;">13. Rule Changes</strong>
+            The driving school reserves the right to modify rules or schedules when necessary.
+          </div>
+        </div>
+
+        <div style="margin-top: 40px; text-align: center;">
+          <a href="javascript:void(0)" onclick="showPage('home')" class="btn" style="background: #0369a1; color: white; padding: 12px 30px;">Back to Home</a>
+        </div>
+      </div>
+    </div>
+    <div id="cert-view" style="display:none;">
+      <div class="cert-container">
+        <div id="certificateArea">
+          <div class="certificate" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiiB3iiNEtRxswuopY8TQhMJ_IBEoRPiCB64Ajj9TicFo_FSG9x9lj6KkXSGm0V44a1kqxNsIhsIUHPpfUxDFuAmShWrFb7K_JTIcbKV4AkHFByciPJpYRybONcaJAaQDJBVJNK1Paz2yj4zKeYlTCaVBFGEgumJbKhrHIUJBfYT1R8Z7IYf4Tse1cM5cA/s0/templete.png');">
+            <div class="cert-name" id="display-cert-name">Student Name</div>
+            <div class="cert-date" id="display-cert-date">Date</div>
+          </div>
+        </div>
+        
+        <div class="download-btn-group">
+          <button onclick="window.print()" class="btn" style="background: #2e7d32; color: white;">
+            <i class="fa-solid fa-print"></i> Print Certificate
+          </button>
+          <button onclick="showPage('home')" class="btn" style="background: #f1f5f9; color: #374151;">
+            Back to Home
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificate Login Modal -->
+    <div id="certLoginModal" class="cert-modal">
+      <div class="cert-modal-content">
+        <span class="cert-modal-close" onclick="closeCertLogin()">&times;</span>
+        <h3>Verify Certificate</h3>
+        <p style="font-size: 14px; color: #6b7280; margin-bottom: 20px;">Please enter your details to view/download your certificate.</p>
+        <form class="cert-modal-form" onsubmit="handleCertLogin(event)">
+          <label for="enroll-id">Enrolment ID</label>
+          <input type="text" id="enroll-id" placeholder="e.g. ZDS2024001" required>
+          
+          <label for="student-name">Full Name</label>
+          <input type="text" id="student-name" placeholder="As per records" required>
+          
+          <button type="submit" class="primary" id="certSubmitBtn">Continue</button>
+        </form>
+        <div id="cert-login-error" style="color: #ef4444; font-size: 13px; margin-top: 10px; text-align: center; display: none;"></div>
+      </div>
+    </div>
+
+    <!-- Image Zoom Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="zoomedImg">
+    </div>
+    
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:15px;">
+              <img src="https://lh3.googleusercontent.com/d/1I-JS7kBaFtiANL-BqMDs1wEJtQmjjE75"
+                alt="Zaara Driving School Logo"
+                style="width:80px; height:80px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.4));" />
+              <h4 style="margin:0;">Zaara Driving School</h4>
+            </div>
+            <p>Your trusted partner for learning to drive safely and confidently in Kolkata.</p>
+            <div class="footer-socials"><a href="https://www.facebook.com/share/17KgJKqJ68/"><i
+                  class="fa-brands fa-facebook"></i></a><a
+                href="https://www.instagram.com/zaaradrivingschool?utm_source=qr&igsh=MWdxZ3ViMXVraWR5Yw=="><i
+                  class="fa-brands fa-instagram"></i></a><a href="https://wa.me/916289876330?text=I%20am%20interested%20in%20booking%20a%20free%20trial%20session."><i class="fa-brands fa-whatsapp"></i></a></div>
+          </div>
+          <div>
+            <h4>Useful Links</h4>
+            <p><a href="javascript:void(0)" onclick="showPage('home', 'services')">Courses</a></p>
+            <p><a href="javascript:void(0)" onclick="showPage('home', 'pricing')">Pricing</a></p>
+            <p><a href="javascript:void(0)" onclick="showPage('tc')">Terms &amp; Conditions</a></p>
+            <p><a href="javascript:void(0)" onclick="openCertLogin()">Certificate</a></p>
+          </div>
+          <div>
+            <h4>Office</h4>
+            <p>283, BB Chatterjee Road</p>
+            <p>Kasba, Kolkata - 700042</p>
+          </div>
+          <div>
+            <h4>Reach Us</h4>
+            <p><a href="mailto:services.zaara@gmail.com">services.zaara@gmail.com</a></p>
+            <p><a href="tel:+916289876330">91 8240039990 / 91 7908781196</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <script>
+    // --- Hero Slider ---
+    (function () {
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      const dots = Array.from(document.querySelectorAll('.dot'));
+      let idx = 0, timer;
+      function show(i) { slides.forEach(s => s.classList.remove('show')); dots.forEach(d => d.classList.remove('active')); slides[i].classList.add('show'); dots[i].classList.add('active'); idx = i; }
+      function next() { show((idx + 1) % slides.length); }
+      dots.forEach(d => d.addEventListener('click', e => show(+e.target.dataset.index)));
+
+      timer = setInterval(next, 2500);
+      const hero = document.querySelector('.hero');
+      hero.addEventListener('mouseenter', () => clearInterval(timer));
+      hero.addEventListener('mouseleave', () => timer = setInterval(next, 2500));
+    })();
+
+    // --- Pricing Slider Logic ---
+    (function () {
+      const wrapper = document.querySelector('.pricing-slider-wrapper');
+      const track = document.querySelector('.pricing-grid');
+      const slides = Array.from(track.children);
+      const dotsNav = document.querySelector('.pricing-controls');
+      const dots = Array.from(dotsNav.children);
+      let currentIndex = 0;
+      let timer;
+
+      function getVisibleSlidesCount() {
+        if (window.innerWidth < 550) return 1;
+        if (window.innerWidth < 900) return 2;
+        return 3;
+      }
+
+      function updateSlidePosition() {
+        const slideWidth = slides[0].clientWidth + 20;
+        track.style.transform = 'translateX(-' + slideWidth * currentIndex + 'px)';
+
+        dots.forEach(dot => dot.classList.remove('active'));
+        const activeDotIndex = currentIndex % slides.length;
+        dots[activeDotIndex].classList.add('active');
+      }
+
+      function moveToNextSlide() {
+        let nextIndex = currentIndex + 1;
+        if (nextIndex > slides.length - getVisibleSlidesCount()) {
+          nextIndex = 0;
+        }
+        currentIndex = nextIndex;
+        updateSlidePosition();
+      }
+
+      function startSlider() {
+        stopSlider();
+        // === UPDATED: Slider speed changed from 4000 to 15000 (15 seconds) ===
+        timer = setInterval(moveToNextSlide, 15000);
+      }
+
+      function stopSlider() {
+        clearInterval(timer);
+      }
+
+      dotsNav.addEventListener('click', e => {
+        const targetDot = e.target.closest('div.dot');
+        if (!targetDot) return;
+
+        const targetIndex = dots.findIndex(dot => dot === targetDot);
+        currentIndex = targetIndex;
+        updateSlidePosition();
+        startSlider();
+      });
+
+      wrapper.addEventListener('mouseenter', stopSlider);
+      wrapper.addEventListener('mouseleave', startSlider);
+
+      function initialize() {
+        currentIndex = 0;
+        updateSlidePosition();
+        startSlider();
+      }
+
+      window.addEventListener('resize', initialize);
+      initialize();
+    })();
+
+    // --- Handle Form Submission (WhatsApp Redirection) ---
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = document.getElementById('submitBtn');
+
+      const name = form.name.value;
+      const email = form.email.value;
+      const phone = form.phone.value;
+      const course = form.course.value;
+      const notes = form.notes.value;
+
+      // Construct WhatsApp Message
+      const message = `*New Booking Request from Website*%0A%0A` +
+        `*Name:* ${name}%0A` +
+        `*Email:* ${email}%0A` +
+        `*Phone:* ${phone}%0A` +
+        `*Course:* ${course}%0A` +
+        `*Notes:* ${notes}`;
+
+      const whatsappUrl = `https://wa.me/916289876330?text=${message}`;
+
+      // Open WhatsApp
+      window.open(whatsappUrl, '_blank');
+
+      // Feedback to user
+      btn.textContent = 'Redirecting to WhatsApp...';
+      document.getElementById('form-message').textContent = 'Submitting your request via WhatsApp...';
+
+      setTimeout(() => {
+        btn.textContent = 'Request Booking';
+        document.getElementById('form-message').textContent = '';
+      }, 3000);
+    }
+
+    // --- Header scroll effect ---
+    window.addEventListener('scroll', function () {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // --- Mobile Menu Toggle ---
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      if (window.innerWidth <= 900) {
+        nav.classList.toggle('active');
+        const icon = document.querySelector('.menu-toggle i');
+        if (nav.classList.contains('active')) {
+          icon.classList.replace('fa-bars', 'fa-xmark');
+        } else {
+          icon.classList.replace('fa-xmark', 'fa-bars');
+        }
+      }
+    }
+    // --- Image Zoom Logic ---
+    function openModal(imgSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('zoomedImg');
+      modalImg.src = imgSrc;
+      modal.style.display = 'flex';
+      setTimeout(() => modal.classList.add('show'), 10);
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('show');
+      setTimeout(() => modal.style.display = 'none', 300);
+    }
+
+    // Add click listeners to review images
+    document.querySelectorAll('.review-card img').forEach(img => {
+      img.addEventListener('click', () => openModal(img.src));
+    });
+
+    // --- Certificate Feature Logic ---
+    function openCertLogin() {
+      document.getElementById('certLoginModal').style.display = 'flex';
+    }
+
+    function closeCertLogin() {
+      document.getElementById('certLoginModal').style.display = 'none';
+      document.getElementById('cert-login-error').style.display = 'none';
+    }
+
+    async function handleCertLogin(e) {
+      e.preventDefault();
+      const enrollId = document.getElementById('enroll-id').value.trim();
+      const studentName = document.getElementById('student-name').value.trim();
+      const btn = document.getElementById('certSubmitBtn');
+      const errorDiv = document.getElementById('cert-login-error');
+
+      if (!enrollId || studentName === "") return;
+
+      btn.disabled = true;
+      btn.textContent = 'Verifying...';
+      errorDiv.style.display = 'none';
+
+      try {
+        const scriptUrl = 'https://script.google.com/macros/s/AKfycbxhZNsE7P_Bzan4biCZz67fDqkhK6WXSah_8c8hMC_aVAwuEW9e1inxMQjqpLi6S9kQ/exec';
+        const response = await fetch(`${scriptUrl}?id=${encodeURIComponent(enrollId)}&name=${encodeURIComponent(studentName)}`);
+        const result = await response.json();
+
+        if (result.status === 'success' || result.found) {
+          document.getElementById('display-cert-name').textContent = result.name || studentName;
+          
+          // Use current date as per user request
+          let d = new Date();
+          document.getElementById('display-cert-date').innerText = d.toLocaleDateString('en-GB', { 
+             day: 'numeric', 
+             month: 'long', 
+             year: 'numeric' 
+          });
+          
+          closeCertLogin();
+          showPage('cert');
+        } else {
+          errorDiv.textContent = result.message || "Record Not Found. Please check your Enrollment ID and Name.";
+          errorDiv.style.display = 'block';
+        }
+      } catch (error) {
+        console.error("Verification Error:", error);
+        errorDiv.textContent = "Unable to connect to verification server. Please try again later.";
+        errorDiv.style.display = 'block';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Continue';
+      }
+    }
+
+    function showPage(pageId, sectionId) {
+      const homeView = document.getElementById('home-view');
+      const tcView = document.getElementById('tc-view');
+      const certView = document.getElementById('cert-view');
+      
+      homeView.style.display = 'none';
+      tcView.style.display = 'none';
+      certView.style.display = 'none';
+      
+      if (pageId === 'home') {
+        homeView.style.display = 'block';
+        if (sectionId) {
+          const element = document.getElementById(sectionId);
+          if (element) window.scrollTo({ top: element.offsetTop - 80, behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      } else if (pageId === 'tc') {
+        tcView.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (pageId === 'cert') {
+        certView.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      toggleMenu();
+    }
+  </script>
+
+  <!-- Mandatory Blogger Section (Hidden to prevent 'No posts found') -->
+  <div style='display:none'>
+    <b:section id='main' name='MainSection' showaddelement='yes'>
+      <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'/>
+    </b:section>
+  </div>
+
+  <script>
+    // Force custom theme on mobile by removing Blogger's default mobile param
+    if (window.location.href.includes('?m=1')) {
+      window.location.replace(window.location.href.split('?m=1')[0]);
+    }
+  </script>
+</body>
+
+</html>
